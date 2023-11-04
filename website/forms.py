@@ -2,9 +2,9 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django import forms
 class SignUpForm(UserCreationForm):
-    email = forms.EmailField(Label="", widget=forms.TextInput(attrs={'class':'form-control','placeholder':'email address'}))
-    first_name = forms.CharField(Label="",max_length=100, widget=forms.TextInput(attrs={'class':'form-control','placeholder':'first name'}))
-    last_name = forms.CharField(Label="",max_length=100, widget=forms.TextInput(attrs={'class':'form-control','placeholder':'last name'}))
+    email = forms.EmailField(label="", widget=forms.TextInput(attrs={'class':'form-control','placeholder':'email address'}))
+    first_name = forms.CharField(label="",max_length=100, widget=forms.TextInput(attrs={'class':'form-control','placeholder':'first name'}))
+    last_name = forms.CharField(label="",max_length=100, widget=forms.TextInput(attrs={'class':'form-control','placeholder':'last name'}))
 
     class Meta:
         model = User
@@ -14,7 +14,7 @@ class SignUpForm(UserCreationForm):
         super(SignUpForm,self).__init__(*args, **kwargs)
 
         self.fields['username'].widget.attrs['class'] = 'form-control'
-        self.fields['username'].widget.attrs['placeholder'] = 'User Name'
+        self.fields['username'].widget.attrs['placeholder'] = 'Username'
         self.fields['username'].label = ''
         self.fields['username'].help_text = '<span class="form-text text-muted"><small>Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</small></span>'
 
