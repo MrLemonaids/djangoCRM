@@ -20,6 +20,7 @@
 </div>
 <a class="btn btn-secondary" href="{% url 'home' %}">Back</a>
 <a class="btn btn-danger" href="{% url 'delete_record' customer_record.id %}">Delete</a>
+<a class="btn btn-info" href="{% url 'edit_record' customer_record.id  %}">Edit record</a>
 
 
 {% endblock %}
