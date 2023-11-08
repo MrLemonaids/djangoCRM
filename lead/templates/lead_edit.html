@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block title %}{{ lead.name }}{% endblock %}
+
+{% block content %}
+
+<div class="py-6 px-6">
+    <h1>Edit Lead</h1>
+    <form method="post">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button class="btn btn-success" type="submit">Confirm changes</button>
+    </form>
+
+</div>
+
+
+{% endblock %}

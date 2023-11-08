@@ -13,6 +13,12 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'add_record' %}">Add record</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'add_lead' %}">Add Lead</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'leads_list' %}">Leads</a>
+        </li>
         {% else %}
           <li class="nav-item">
             <a class="nav-link" href="{% url 'home' %}">Login</a>
@@ -20,6 +26,7 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'register' %}">Register</a>
           </li>
+
         {% endif %}
       </ul>
     </div>

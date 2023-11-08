@@ -95,3 +95,4 @@ def edit_record(request, pk):
     else:
         messages.success(request, "You must be logged in to view that page")
         return redirect('home')
+
